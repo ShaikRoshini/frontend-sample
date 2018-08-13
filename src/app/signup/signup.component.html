@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<div class="container">
+  
+  <div class="card card-container">
+    <h3 class="text-center">
+      SIGN UP
+    </h3>
+    <div class="row">
+      <div class="col-xs-12"> 
+      <button class="btn col-xs-6 btn-facebook pull-left">
+        <i class="fab fa-facebook-f"></i>   signup with facebook</button>
+     
+      <button class="btn col-xs-6 btn-google pull-right">
+        <i class="fab fa-google"></i>  signup with Google</button>
+    </div>
+    </div>
+    <form #regForm='ngForm' class="separator">
+      <div class="form-group input-group col-xs-12">
+        <div class="col-xs-6 paddig-remove fname">
+          <input type="text" [(ngModel)]="userdata.Fname" name="Fname" class="form-control border " placeholder="FIRST NAME"  #Fname="ngModel">
+        </div>
+        <div class="col-xs-6 paddig-remove2 lname">
+          <input type="text" [(ngModel)]="userdata.Lname" name="Lname" class="form-control border" placeholder="LAST NAME"  #Lname="ngModel">
+        </div>
+      </div>
+      <div class="form-group input-group col-xs-12">
+        <input type="email" [(ngModel)]="userdata.email" name="email" class="form-control border" placeholder="EMAIL" #email="ngModel">
+      </div>
+      <div class="form-group input-group col-xs-12">
+        <input type="email" [(ngModel)]="userdata.phonenumber" name="phonenumber" class="form-control border" placeholder="PHONE NUMBER" #phonenumber="ngModel">
+      </div>
+      <div class="form-group input-group col-xs-12">
+          <div class="col-xs-6 paddig-remove fname">
+            <input type="text" [(ngModel)]="userdata.password" name="password" class="form-control border " placeholder="PASSWORD"  #password="ngModel">
+          </div>
+          <div class="col-xs-6 paddig-remove2 lname">
+            <input type="text" [(ngModel)]="userdata.conpassword" name="conpassword" class="form-control border" placeholder="CONFIRMPASSWORD"  #conpassword="ngModel">
+          </div>
+        </div>
+        <button (click)="signUp()"  type="submit" class="btn btn-block btn-lg signupbtn"> SIGN UP</button>
+    </form>
+  </div>
+</div>
