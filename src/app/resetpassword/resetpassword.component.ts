@@ -17,6 +17,8 @@ public password:any;
     private registerservice:RegisterService,
     private router:ActivatedRoute) { }
 
+    public data : any;
+
   ngOnInit() {
     this.router.params.subscribe((params)=>{
     
@@ -40,10 +42,18 @@ resetpassword()
   this.registerservice.resetpassword(this.userdata,this.id)
   .subscribe(
     (response)=> {
-      console.log(response)
+      console.log(response);
+      this.data=response;
+      if(this.data.status){
+        alert(this.data.message);
+        this.route.navigate(['/Login']);
+      }
+      else{
+        alert(this.data.message);
+      }
     }
   )
-  this.route.navigate(['/Login']);
+ 
   }
   
 
