@@ -15,4 +15,10 @@ login(loginData){
 password(userData){
   return this.http.post<any>("http://localhost:3001/v1/forgotpassword/passwordreset",userData)
 }
+resetpassword(passwordData,id){
+  console.log(id);
+  
+  return this.http.post<any>("http://localhost:3001/v1/resetpassword/passwordreset",{passwordData:passwordData,id:id});
+
+}
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm,FormControl,FormsModule} from '@angular/forms';
 import { Router } from '@angular/router';
-import {RegisterService} from '../register.service'
+import { RegisterService } from '../register.service'
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',

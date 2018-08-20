@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule , Routes } from '@angular/router';
+import { RouterConfigLoader } from '@angular/router/src/router_config_loader';
 
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { RegisterService} from './register.service'
@@ -16,7 +17,7 @@ const routes: Routes = ([
   {path:"signup",component:SignupComponent},
   {path:"Login",component:LoginComponent},
   {path:"forgotpassword",component:ForgotpasswordComponent},
-  {path:"resetpassword",component:ResetpasswordComponent}
+  {path:"resetpassword/:id",component:ResetpasswordComponent}
 ])
 
 @NgModule({

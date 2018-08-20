@@ -17,6 +17,7 @@ userdata = {
   email:''
 }
 resetpassword(){
+  alert("password sucessfully sent your mail");
   this.registerservice.password(this.userdata)
   .subscribe(
     (response)=> {
