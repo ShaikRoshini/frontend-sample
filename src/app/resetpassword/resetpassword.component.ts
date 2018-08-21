@@ -39,6 +39,7 @@ public password:any;
 
 resetpassword()
 {
+  if(this.userdata.password == this.userdata.confirmpassword){
   this.registerservice.resetpassword(this.userdata,this.id)
   .subscribe(
     (response)=> {
@@ -55,7 +56,9 @@ resetpassword()
   )
  
   }
-  
-
+  else{
+  alert("password must be same")
+}
+}
 
 }
